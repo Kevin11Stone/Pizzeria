@@ -178,6 +178,9 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InitialModels\Beverage.cs" />
+    <Compile Include="Models\InitialModels\ImplementsTopping\Cheese.cs" />
+    <Compile Include="Models\InitialModels\ImplementsTopping\Crust.cs" />
+    <Compile Include="Models\InitialModels\ImplementsTopping\Sauce.cs" />
     <Compile Include="Models\InitialModels\SideDish.cs" />
     <Compile Include="Models\InitialModels\SignaturePizza.cs" />
     <Compile Include="Models\InitialModels\IMenuItem.cs" />
