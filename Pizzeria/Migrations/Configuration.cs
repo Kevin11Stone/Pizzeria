@@ -31,11 +31,59 @@ namespace Pizzeria.Migrations
                     ItemPrice = 14.00m,
                     ItemDescription = "Makes you want to dance!",
                     Category = "Pizza",
-                    PizzaCheese = "Mozz",
+                    PizzaCheese = "Mozzarella",
                     PizzaSauce = "Traditional",
                     PizzaCrust = "Traditional",
-
+                    Toppings = new List<PizzaTopping>()
+                    {
+                        new PizzaTopping("Pepporoni"),
+                        new PizzaTopping("Sausage"),
+                        new PizzaTopping("Ham"),
+                        new PizzaTopping("Bacon"),
+                        new PizzaTopping("Meatball"),
+                    }
+                },
+                new SignaturePizza
+                {
+                    ItemName = "The Ray Charles",
+                    ItemPrice = 14.00m,
+                    ItemDescription = "It'll put Georgia on your mind!",
+                    Category = "Pizza",
+                    PizzaCheese = "Mozzarella",
+                    PizzaSauce = "Garlic Alfredo",
+                    PizzaCrust = "Traditional",
+                    Toppings = new List<PizzaTopping>()
+                    {
+                        new PizzaTopping("Green Bell Peppers"),
+                        new PizzaTopping("Sausage"),
+                        new PizzaTopping("Onion"),
+                        new PizzaTopping("Fresh Mushroom"),
+                        new PizzaTopping("Black Olive"),
+                    }
+                },
+                new SignaturePizza
+                {
+                    ItemName = "The Stevie Wonder",
+                    ItemPrice = 14.00m,
+                    ItemDescription = "It'll make you superstitious!",
+                    Category = "Pizza",
+                    PizzaCheese = "Vegan Cheese",
+                    PizzaSauce = "Traditional",
+                    PizzaCrust = "Gluten-free",
+                    Toppings = new List<PizzaTopping>()
+                    {
+                        new PizzaTopping("Vegan Sausage"),
+                        new PizzaTopping("Vegan Meatball"),
+                        new PizzaTopping("Red Bell Pepper"),
+                        new PizzaTopping("Fresh Mushroom"),
+                        new PizzaTopping("Black Olive"),
+                        new PizzaTopping("Garlic"),
+                        new PizzaTopping("Spinach"),
+                        new PizzaTopping("Grape Tomato")
+                    }
                 }
+
+
             };
 
 
