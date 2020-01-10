@@ -46,7 +46,7 @@ namespace Pizzeria.Migrations
                 new SignaturePizza
                 {
                     ItemName = "The Ray Charles",
-                    ItemPrice = 14.00m,
+                    ItemPrice = 14.50m,
                     ItemDescription = "It'll put Georgia on your mind!",
                     Category = "Pizza",
                     PizzaCheese = "Mozzarella",
@@ -64,7 +64,7 @@ namespace Pizzeria.Migrations
                 new SignaturePizza
                 {
                     ItemName = "The Stevie Wonder",
-                    ItemPrice = 14.00m,
+                    ItemPrice = 13.50m,
                     ItemDescription = "It'll make you superstitious!",
                     Category = "Pizza",
                     PizzaCheese = "Vegan Cheese",
@@ -86,7 +86,8 @@ namespace Pizzeria.Migrations
 
             };
 
-
+            signaturePizzas.ForEach(s => context.SignaturePizzas.AddOrUpdate(p => p.ItemName, s));
+            context.SaveChanges();
 
         }
     }
