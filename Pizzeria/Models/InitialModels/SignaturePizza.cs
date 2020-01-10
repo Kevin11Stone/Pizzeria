@@ -35,7 +35,7 @@ namespace Pizzeria.Models.InitialModels
         public Cheese PizzaCheese { get; set; }
 
         /// <summary>
-        /// List of all toppings on the pizza.
+        /// List of all toppings on the signature pizza.
         /// </summary>
         public ICollection<IPizzaTopping> Toppings { get; set; }
 

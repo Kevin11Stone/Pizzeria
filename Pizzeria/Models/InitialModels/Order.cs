@@ -15,6 +15,10 @@ namespace Pizzeria.Models.InitialModels
         }
 
         public int OrderId { get; set; }
+
+        /// <summary>
+        /// The total of every menu item's price in the order items list.
+        /// </summary>
         public decimal TotalPrice
         {
             get
@@ -39,7 +43,7 @@ namespace Pizzeria.Models.InitialModels
 
 
         /// <summary>
-        /// Adds menu item to list of items for an order and 
+        /// Adds menu item to order list and 
         /// adds the price of the item to the order's total price.
         /// </summary>
         /// <param name="menuItem">The menu item to add the order</param>
