@@ -41,6 +41,11 @@ namespace Pizzeria.Models.InitialModels
         /// </summary>
         public ICollection<IMenuItem> OrderItems { get; set; }
 
+        /// <summary>
+        /// The member to reward points after completion of order.
+        /// </summary>
+        public ApplicationUser Member { get; set; }
+
 
         /// <summary>
         /// Adds menu item to order list and 
