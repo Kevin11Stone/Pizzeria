@@ -1,5 +1,4 @@
-﻿using Pizzeria.Models.InitialModels.ImplementsTopping;
-using Pizzeria.Models.Interfaces;
+﻿using Pizzeria.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace Pizzeria.Models.InitialModels
 
         public CustomPizza()
         {
-            this.CustomPizzaToppings = new List<IPizzaTopping>();
+            this.CustomPizzaToppings = new List<PizzaTopping>();
         }
 
         /// <summary>
@@ -28,16 +27,15 @@ namespace Pizzeria.Models.InitialModels
         public string ItemDescription { get; set; }
         public string Category { get; set; }
         public decimal ItemPrice { get; set; }
+        public string PizzaSauce { get; set; }
+        public string PizzaCrust { get; set; }
+        public string PizzaCheese { get; set; }
 
         /// <summary>
         /// Pizza toppings added to a custom pizza.
         /// </summary>
-        public ICollection<IPizzaTopping> CustomPizzaToppings { get; set; }
+        public ICollection<PizzaTopping> CustomPizzaToppings { get; set; }
 
 
-
-        public Sauce PizzaSauce { get; set; }
-        public Crust PizzaCrust { get; set; }
-        public Cheese PizzaCheese { get; set; }
     }
 }
