@@ -184,14 +184,11 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\InitialModels\Beverage.cs" />
     <Compile Include="Models\InitialModels\CustomPizza.cs" />
-    <Compile Include="Models\InitialModels\ImplementsTopping\Cheese.cs" />
-    <Compile Include="Models\InitialModels\ImplementsTopping\Crust.cs" />
-    <Compile Include="Models\InitialModels\ImplementsTopping\Sauce.cs" />
     <Compile Include="Models\InitialModels\Order.cs" />
     <Compile Include="Models\InitialModels\SideDish.cs" />
     <Compile Include="Models\InitialModels\SignaturePizza.cs" />
     <Compile Include="Models\InitialModels\IMenuItem.cs" />
-    <Compile Include="Models\InitialModels\IPizzaTopping.cs" />
+    <Compile Include="Models\InitialModels\PizzaTopping.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

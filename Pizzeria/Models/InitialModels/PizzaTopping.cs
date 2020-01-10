@@ -10,8 +10,13 @@ namespace Pizzeria.Models.Interfaces
     /// Represents a single pizza topping
     /// ex. pepperoni, mushrooms
     /// </summary>
-    public interface IPizzaTopping
+    public class PizzaTopping
     {
+        public PizzaTopping(string toppingName)
+        {
+            ToppingName = toppingName;
+        }
+
         public string ToppingName { get; set; }
     }
 }
