@@ -6,14 +6,8 @@ using System.Web;
 
 namespace Pizzeria.Models.InitialModels
 {
-    public class SignaturePizza : IMenuItem
+    public class Beverage : IMenuItem
     {
-
-        public SignaturePizza()
-        {
-            this.Toppings = new List<IPizzaTopping>();
-        }
-
         public string ItemName { get; set; }
         public string ItemDescription { get; set; }
         public string Category { get; set; }
@@ -26,18 +20,5 @@ namespace Pizzeria.Models.InitialModels
         {
             return $"{ItemName}";
         }
-
-
-        // Signature pizza properties
-
-        public ICollection<IPizzaTopping> Toppings { get; set; }
-
-   
-        public void AddTopping(IPizzaTopping topping)
-        {
-            this.Toppings.Add(topping);
-        }
-
-
     }
 }
