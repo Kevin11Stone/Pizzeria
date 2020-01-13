@@ -32,6 +32,7 @@ namespace Pizzeria.Models
         }
 
         public virtual DbSet<SignaturePizza> SignaturePizzas { get; set; }
+        public virtual DbSet<Beverage> Beverages { get; set; }
 
     }
 }
