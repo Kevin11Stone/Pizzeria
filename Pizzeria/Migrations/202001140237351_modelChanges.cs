@@ -33,6 +33,7 @@ namespace Pizzeria.Migrations
                 .PrimaryKey(t => t.OrderId)
                 .ForeignKey("dbo.AspNetUsers", t => t.Member_Id)
                 .Index(t => t.Member_Id);
+
             
             CreateTable(
                 "dbo.SideDishes",
