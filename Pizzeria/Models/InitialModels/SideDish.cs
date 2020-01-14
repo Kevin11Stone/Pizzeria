@@ -1,6 +1,7 @@
 ﻿using Pizzeria.Models.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,8 @@ namespace Pizzeria.Models.InitialModels
 {
     public class SideDish : IMenuItem
     {
+        [Key]
+        public int SideDishId { get; set; }
         public string ItemName { get; set; }
         public string ItemDescription { get; set; }
         public string Category { get; set; }

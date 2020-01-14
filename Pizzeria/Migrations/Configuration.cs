@@ -12,7 +12,7 @@ namespace Pizzeria.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Pizzeria.Models.ApplicationDbContext context)
@@ -23,6 +23,7 @@ namespace Pizzeria.Migrations
             //  to avoid creating duplicate seed data.
 
 
+            // create signature pizzas
             var signaturePizzas = new List<SignaturePizza>
             {
                 new SignaturePizza
@@ -87,6 +88,44 @@ namespace Pizzeria.Migrations
             };
 
             signaturePizzas.ForEach(s => context.SignaturePizzas.AddOrUpdate(p => p.ItemName, s));
+            context.SaveChanges();
+
+
+            // create beverage objects
+            var beverages = new List<Beverage>
+            {
+
+                new Beverage
+                {
+                    Category = "Soft drink",
+                    ItemName = "Fountain drink",
+                    ItemDescription = "Carbonated soft drink product from major company",
+                    ItemPrice = 1.50m
+                },
+                new Beverage
+                {
+                    Category = "Alcohol",
+                    ItemName = "Beer",
+                    ItemDescription = "Craft beer brewed locally",
+                    ItemPrice = 5.50m
+                },
+                new Beverage
+                {
+                    Category = "Water",
+                    ItemName = "Water",
+                    ItemDescription = "Bottled water",
+                    ItemPrice = 1.20m
+                },
+                new Beverage
+                {
+                    Category = "Sports drink",
+                    ItemName = "Sports drink",
+                    ItemDescription = "Electrolyte-rich soft drink",
+                    ItemPrice = 2.50m
+                }
+            };
+
+            beverages.ForEach(b => context.Beverages.AddOrUpdate(p => p.ItemName, b));
             context.SaveChanges();
 
         }
