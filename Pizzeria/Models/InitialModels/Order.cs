@@ -1,6 +1,7 @@
 ﻿using Pizzeria.Models.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -14,6 +15,7 @@ namespace Pizzeria.Models.InitialModels
             this.OrderItems = new List<IMenuItem>();
         }
 
+        [Key]
         public int OrderId { get; set; }
 
         /// <summary>

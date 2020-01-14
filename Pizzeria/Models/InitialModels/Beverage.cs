@@ -7,6 +7,10 @@ using System.Web;
 
 namespace Pizzeria.Models.InitialModels
 {
+    
+    /// <summary>
+    /// Represents a single beverage item
+    /// </summary>
     public class Beverage : IMenuItem
     {
         [Key]
