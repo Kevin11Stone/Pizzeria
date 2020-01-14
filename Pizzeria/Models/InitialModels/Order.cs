@@ -7,6 +7,10 @@ using System.Web;
 
 namespace Pizzeria.Models.InitialModels
 {
+
+    /// <summary>
+    /// Represents a single order a customer creates.
+    /// </summary>
     public class Order
     {
 

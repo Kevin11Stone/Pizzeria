@@ -24,15 +24,17 @@ namespace Pizzeria.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+
         }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+        
 
-        public virtual DbSet<SignaturePizza> SignaturePizzas { get; set; }
         public virtual DbSet<Beverage> Beverages { get; set; }
+        public virtual DbSet<SignaturePizza> SignaturePizzas { get; set; }
         public virtual DbSet<SideDish> SideDishes { get; set; }
         public virtual DbSet<CustomPizza> CustomPizzas { get; set; }
         public virtual DbSet<Order> Orders { get; set; }

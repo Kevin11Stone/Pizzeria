@@ -21,6 +21,19 @@ namespace Pizzeria.Migrations
                         PizzaCheese = c.String(),
                     })
                 .PrimaryKey(t => t.CustomPizzaId);
+
+            CreateTable(
+                "dbo.Beverages",
+                c => new
+                    {
+                        BeverageId = c.Int(nullable: false, identity: true),
+                        ItemName = c.String(),
+                        ItemDescription = c.String(),
+                        Category = c.String(),
+                        ItemPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
+
+                    })
+                .PrimaryKey(t => t.BeverageId);
             
             CreateTable(
                 "dbo.Orders",

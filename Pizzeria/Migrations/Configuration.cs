@@ -12,7 +12,7 @@ namespace Pizzeria.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Pizzeria.Models.ApplicationDbContext context)
