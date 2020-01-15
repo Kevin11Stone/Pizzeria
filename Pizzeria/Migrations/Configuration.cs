@@ -183,6 +183,9 @@ namespace Pizzeria.Migrations
                 }
             };
 
+            sideDishes.ForEach(s => context.SideDishes.AddOrUpdate(n => n.ItemName, s));
+            context.SaveChanges();
+
         }
     }
 }
