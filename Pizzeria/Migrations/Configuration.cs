@@ -128,6 +128,64 @@ namespace Pizzeria.Migrations
             beverages.ForEach(b => context.Beverages.AddOrUpdate(p => p.ItemName, b));
             context.SaveChanges();
 
+
+            var sideDishes = new List<SideDish>
+            {
+
+                new SideDish
+                {
+                    ItemName = "Breadsticks",
+                    ItemDescription = "Garlic parmesan butter breadsticks",
+                    ItemPrice = 6.99m,
+                    Category = "Breadsticks",         
+                },
+                new SideDish
+                {
+                    ItemName = "Chef Salad",
+                    ItemDescription = "Romaine, bacon, red onion, grape tomato, goat cheese, blue cheese dressing",
+                    ItemPrice = 4.99m,
+                    Category = "Salads",
+                },
+                new SideDish
+                {
+                    ItemName = "Classic Chicken Caesar",
+                    ItemDescription = "Romaine, all-natural chicken breast, parmesan, crouton, caesar dressing",
+                    ItemPrice = 4.99m,
+                    Category = "Salads",
+                },
+                new SideDish
+                {
+                    ItemName = "Chopped Antipasto",
+                    ItemDescription = "Romaine, pepperoni, mozzarella, grape tomato, black olive, banana pepper, red onion, red wine vinegar and olive oil vinagrette",
+                    ItemPrice = 4.99m,
+                    Category = "Salads",
+                },
+                new SideDish
+                {
+                    ItemName = "Bacon & Blu",
+                    ItemDescription = "Romaine, bacon, red onion, grape tomato, goat cheese, blue cheese dressing",
+                    ItemPrice = 4.99m,
+                    Category = "Salads",
+                },
+                new SideDish
+                {
+                    ItemName = "Buffalo Chicken Wings",
+                    ItemDescription = "12 bone-in hot wings doused with Buffalo sauce",
+                    ItemPrice = 7.50m,
+                    Category = "Chicken Wings",
+                },
+                new SideDish
+                {
+                    ItemName = "BBQ Chicken Wings",
+                    ItemDescription = "12 bone-in chicken wings doused with BBQ sauce",
+                    ItemPrice = 7.50m,
+                    Category = "Chicken Wings",
+                }
+            };
+
+            sideDishes.ForEach(s => context.SideDishes.AddOrUpdate(n => n.ItemName, s));
+            context.SaveChanges();
+
         }
     }
 }
