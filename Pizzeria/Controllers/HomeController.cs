@@ -26,5 +26,12 @@ namespace Pizzeria.Controllers
 
             return View();
         }
+
+        public ActionResult Menu()
+        {
+            ViewBag.Message = "Your menu page.";
+
+            return View();
+        }
     }
 }

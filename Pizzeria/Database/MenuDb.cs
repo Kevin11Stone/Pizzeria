@@ -18,7 +18,10 @@ namespace Pizzeria.Database
     public class MenuDb
     {
 
-
+        /// <summary>
+        /// Returns list of beverage menu items.
+        /// </summary>
+        /// <returns></returns>
         public static List<Beverage> GetAllBeverages()
         {
 
