@@ -2,6 +2,12 @@
     background-color:aqua !important
 }
 
-#rows{
-    background-color:whitesmoke !important
+#rows {
+    margin-top:30px;
+    background-color: whitesmoke !important
+        
+}
+
+.carousel-inner > .item {
+    height: 400px;
 }
