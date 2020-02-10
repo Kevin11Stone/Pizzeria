@@ -30,7 +30,14 @@ namespace Pizzeria.Controllers
         {
             ViewBag.Message = "Your order page.";
 
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("LogIn", "Account");
+            }
         }
         public ActionResult Menu()
         {

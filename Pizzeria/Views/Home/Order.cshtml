@@ -1,15 +1,23 @@
 ﻿@model Pizzeria.Models.InitialModels.Order
 
+
 @{
     ViewBag.Title = "Menu";
 }
+<head>
+    <link href="~/Styling/HomePage.css" rel="stylesheet" />
+</head>
 
-<h2>Menu</h2>
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
 
-@using (Html.BeginForm()) 
+<h2>Order Page</h2>
+
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Order</h4>
         <hr />
@@ -31,5 +39,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Home Page", "Index")
 </div>
