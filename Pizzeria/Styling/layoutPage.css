@@ -1,0 +1,29 @@
+﻿
+
+#navBar{
+    background-color:white
+}
+
+#jumbotron {
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+        
+}
+
+
+#logo {
+    height: 100% !important;
+    width: 100px !important;
+}
+
+.navbar-brand {
+    margin-left: 15px !important;
+}
+
+.htmlActionLinks{
+    margin-top: 30px !important;
+    
+}
+.htmlActionLinks:hover {
+    color:dodgerblue !important;
+}

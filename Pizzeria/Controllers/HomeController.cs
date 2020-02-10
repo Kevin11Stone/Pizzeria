@@ -26,5 +26,24 @@ namespace Pizzeria.Controllers
 
             return View();
         }
+        public ActionResult Order()
+        {
+            ViewBag.Message = "Your order page.";
+
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("LogIn", "Account");
+            }
+        }
+        public ActionResult Menu()
+        {
+            ViewBag.Message = "Your menu page.";
+
+            return View();
+        }
     }
 }
