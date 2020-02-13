@@ -1,7 +1,7 @@
 ﻿
 
 #navBar{
-    background-color:white
+    background-color:white !important;
 }
 
 #jumbotron {
@@ -27,3 +27,4 @@
 .htmlActionLinks:hover {
     color:dodgerblue !important;
 }
+

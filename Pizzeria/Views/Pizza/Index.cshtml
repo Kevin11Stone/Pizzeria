@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Pizzeria.Models.InitialModels.SignaturePizza>
+
+@{
+    ViewBag.Title = "Index";
+}
+    <head>
+        <link href="~/Styling/layoutPage.css" rel="stylesheet" />
+        
+    </head>
+
+ 
+
+        <h2>Index</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PizzaSauce)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PizzaCrust)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PizzaCheese)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PizzaSauce)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PizzaCrust)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PizzaCheese)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.PizzaId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.PizzaId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.PizzaId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+
+ 

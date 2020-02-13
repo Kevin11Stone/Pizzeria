@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Pizzeria.Models;
+using Pizzeria.Models.InitialModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,6 +12,13 @@ namespace Pizzeria.Controllers
 {
     public class HomeController : Controller
     {
+ 
+        public HomeController()
+        {
+
+        }
+
+
         public ActionResult Index()
         {
             return View();
@@ -39,11 +50,7 @@ namespace Pizzeria.Controllers
                 return RedirectToAction("LogIn", "Account");
             }
         }
-        public ActionResult Menu()
-        {
-            ViewBag.Message = "Your menu page.";
 
-            return View();
-        }
+
     }
 }
