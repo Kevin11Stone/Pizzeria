@@ -55,7 +55,7 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR2vFUqAkLsSDgHyxjG0IOMrivEoL2EbnmVvhAF3JqBtIxfiZs" />
                     <div class="carousel-caption d-none d-md-block">
 
-                        <h1> Scroll to View Our Pizzas!</h1>
+                        <h1> Stone's Signature Pizzas</h1>
                     </div>
                 </div>
 
@@ -66,9 +66,7 @@
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR2vFUqAkLsSDgHyxjG0IOMrivEoL2EbnmVvhAF3JqBtIxfiZs" />
                         <div class="carousel-caption d-none d-md-block">
                             <h2>@item.ItemName</h2>
-                            <h3>@item.ItemDescription</h3>
-                            <h3>$@item.ItemPrice.ToString()</h3>
-                           
+                            <h3>@item.ItemDescription</h3>                                               
                         </div>
                     </div>
                 }
@@ -96,7 +94,7 @@
             @Html.DisplayNameFor(model => model.ItemName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ItemDescription)
+            @Html.DisplayNameFor(model => model.Toppings)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Category)
@@ -123,7 +121,7 @@
                 @Html.DisplayFor(modelItem => item.ItemName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemDescription)
+                @Html.DisplayFor(modelItem => item.Toppings)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
