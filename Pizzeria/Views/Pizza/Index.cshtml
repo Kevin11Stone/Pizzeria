@@ -4,76 +4,141 @@
     ViewBag.Title = "Index";
 }
     <head>
-        <link href="~/Styling/layoutPage.css" rel="stylesheet" />
-        
-    </head>
 
- 
+        @*<link href="~/Styling/HomePage.css" rel="stylesheet" />*@
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <h2>Index</h2>
-
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ItemName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ItemDescription)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Category)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ItemPrice)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PizzaSauce)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PizzaCrust)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PizzaCheese)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ItemName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ItemDescription)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Category)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ItemPrice)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PizzaSauce)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PizzaCrust)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PizzaCheese)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.PizzaId }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.PizzaId }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.PizzaId })
-                    </td>
-                </tr>
+        <style>
+            body {
+                background-color: dodgerblue !important;
+                margin-top: 100px;
             }
 
-        </table>
+            .table {
+                background-color: whitesmoke !important;
+            }
+
+            .carousel {
+                height: auto !important;
+                width: auto !important;
+            }
+
+            #myCarousel {
+                margin-bottom: 50px !important;
+                height: 250px !important;
+            }
+        
+        </style>
+
+    </head>
 
 
- 
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                @foreach (var item in Model)
+                {
+                    <li data-target="#myCarousel" data-slide-to="@item.PizzaId"></li>
+                }
+                @*<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>*@
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR2vFUqAkLsSDgHyxjG0IOMrivEoL2EbnmVvhAF3JqBtIxfiZs" />
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <h1> Stone's Signature Pizzas</h1>
+                    </div>
+                </div>
+
+
+                @foreach (var item in Model)
+                {
+                    <div class="item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR2vFUqAkLsSDgHyxjG0IOMrivEoL2EbnmVvhAF3JqBtIxfiZs" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>@item.ItemName</h2>
+                            <h3>@item.ItemDescription</h3>                                               
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+   
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Toppings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PizzaSauce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PizzaCrust)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PizzaCheese)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Toppings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.ItemPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PizzaSauce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PizzaCrust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PizzaCheese)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
